@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>牛来火星 | $牛来火星 — Cosmic Bull Energy on BNB</title>
+  <meta name="description" content="牛来火星 brings cosmic bull energy, wild memes, and unstoppable BNB vibes straight to Mars! Buy $牛来火星 on BNB Smart Chain." />
+  <meta name="theme-color" content="#1a0805" />
+  <link rel="icon" href="logo.png" type="image/png" />
+  <meta property="og:title" content="牛来火星 | $牛来火星" />
+  <meta property="og:description" content="Cosmic bull energy, wild memes, and unstoppable BNB vibes — straight to Mars." />
+  <meta property="og:image" content="banner.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="banner.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Oxanium:wght@400;500;600;700;800&family=Share+Tech+Mono&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            void: "#0d0604",
+            deep: "#1a0805",
+            crust: "#4a160a",
+            dust: "#9a3412",
+            clay: "#c2410c",
+            ember: "#ea580c",
+            gold: { 200: "#fde68a", 300: "#fcd34d", 400: "#fbbf24", 500: "#e8b84a", 600: "#ca8a04", 700: "#a16207" },
+            horn: "#8babff",
+            bull: "#f0c84a",
+            cream: "#f6efe4",
+          },
+          fontFamily: {
+            display: ["Oxanium", "Noto Sans SC", "sans-serif"],
+            cn: ["ZCOOL QingKe HuangYou", "Noto Sans SC", "sans-serif"],
+            sans: ["Noto Sans SC", "Oxanium", "sans-serif"],
+            mono: ["Share Tech Mono", "ui-monospace", "monospace"],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    :root {
+      --gold: #fbbf24;
+      --gold-soft: #fde68a;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: #0d0604;
+      color: #f6efe4;
+      overflow-x: hidden;
+    }
+    .mars-hero {
+      background:
+        linear-gradient(180deg, rgba(13, 6, 4, 0.35) 0%, rgba(13, 6, 4, 0.15) 38%, rgba(13, 6, 4, 0.78) 78%, #0d0604 100%),
+        radial-gradient(ellipse 90% 50% at 50% -8%, rgba(196, 65, 12, 0.55), transparent 58%),
+        url("banner.jpg") center 42% / cover no-repeat;
+    }
+    .gold-text {
+      background: linear-gradient(180deg, #fff8d6 0%, #fde68a 22%, #fbbf24 48%, #d97706 78%, #92400e 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 4px 18px rgba(251, 191, 36, 0.35));
+    }
+    .gold-ring {
+      background: conic-gradient(from 0deg, #92400e, #fde68a, #fbbf24, #b45309, #fde68a, #92400e);
+    }
+    .btn-gold {
+      background: linear-gradient(180deg, #fde68a 0%, #fbbf24 42%, #d97706 100%);
+      color: #1a0805;
+      box-shadow: 0 0 0 1px #fde68a, 0 10px 36px rgba(251, 191, 36, 0.38);
+    }
+    .btn-gold:hover { filter: brightness(1.08); transform: translateY(-2px); }
+    .btn-outline {
+      border: 1px solid rgba(253, 230, 138, 0.7);
+      color: #fde68a;
+      background: rgba(26, 8, 5, 0.45);
+      box-shadow: inset 0 0 20px rgba(251, 191, 36, 0.08);
+    }
+    .btn-outline:hover { background: rgba(251, 191, 36, 0.12); transform: translateY(-2px); }
+    .panel {
+      background: linear-gradient(180deg, rgba(74, 22, 10, 0.45), rgba(13, 6, 4, 0.72));
+      border: 1px solid rgba(251, 191, 36, 0.28);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(253, 230, 138, 0.12);
+    }
+    .grain {
+      pointer-events: none;
+      position: fixed;
+      inset: 0;
+      z-index: 60;
+      opacity: 0.07;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+    .ticker {
+      animation: ticker 28s linear infinite;
+    }
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    @keyframes spin-slow {
+      to { transform: rotate(360deg); }
+    }
+    @keyframes spin-rev {
+      to { transform: rotate(-360deg); }
+    }
+    @keyframes floaty {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 24px rgba(251, 191, 36, 0.25); }
+      50% { box-shadow: 0 0 48px rgba(251, 191, 36, 0.55); }
+    }
+    .spin-slow { animation: spin-slow 18s linear infinite; }
+    .spin-rev { animation: spin-rev 26s linear infinite; }
+    .floaty { animation: floaty 5.5s ease-in-out infinite; }
+    .logo-glow { animation: pulse-glow 3.4s ease-in-out infinite; }
+    #dust {
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+    }
+    .nav-glass {
+      background: rgba(13, 6, 4, 0.72);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(251, 191, 36, 0.18);
+    }
+    .step-line {
+      background: linear-gradient(90deg, transparent, #fbbf24, transparent);
+    }
+    .live-dot {
+      box-shadow: 0 0 10px #fbbf24;
+      animation: pulse-glow 1.6s ease-in-out infinite;
+    }
+    .ca-box {
+      background: rgba(13, 6, 4, 0.65);
+      border: 1px solid rgba(251, 191, 36, 0.4);
+    }
+    #dexscreener-embed { position: relative; width: 100%; padding-bottom: 125%; }
+    @media (min-width: 1024px) { #dexscreener-embed { padding-bottom: 62%; } }
+    #dexscreener-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .reveal { opacity: 0; transform: translateY(22px); animation: reveal 0.8s ease forwards; }
+    @keyframes reveal { to { opacity: 1; transform: none; } }
+    .d1 { animation-delay: 0.08s; }
+    .d2 { animation-delay: 0.16s; }
+    .d3 { animation-delay: 0.24s; }
+    .d4 { animation-delay: 0.32s; }
+  </style>
+</head>
+<body class="font-sans antialiased">
+  <canvas id="dust"></canvas>
+  <div class="grain"></div>
+
+  <nav class="nav-glass fixed top-0 inset-x-0 z-50">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3">
+      <a href="#top" class="flex items-center gap-2.5">
+        <img src="logo.png" alt="牛来火星 logo" class="h-11 w-11 rounded-full ring-2 ring-gold-400/70" />
+        <span class="font-cn text-2xl leading-none gold-text sm:text-[1.7rem]">牛来火星</span>
+      </a>
+      <div class="hidden items-center gap-8 font-display text-sm font-semibold tracking-wider text-cream/80 md:flex">
+        <a href="#mission" class="hover:text-gold-300">MISSION</a>
+        <a href="#buy" class="hover:text-gold-300">HOW TO BUY</a>
+        <a href="#chart" class="hover:text-gold-300">CHART</a>
+      </div>
+      <div class="flex items-center gap-2 sm:gap-3">
+        <a href="https://x.com/bullonmars" target="_blank" rel="noopener noreferrer" class="flex h-10 w-10 items-center justify-center overflow-hidden rounded-lg ring-1 ring-gold-400/50" aria-label="Twitter / X">
+          <img src="x.png" alt="X" class="h-10 w-10 object-cover" />
+        </a>
+        <a href="https://dexscreener.com/bsc/TBA" target="_blank" rel="noopener noreferrer" class="btn-outline hidden rounded-lg px-3 py-2 font-display text-xs font-bold tracking-wider sm:inline-flex">CHART</a>
+        <a href="https://flap.sh/bnb/TBA" target="_blank" rel="noopener noreferrer" class="btn-gold rounded-lg px-3 py-2 font-display text-xs font-extrabold tracking-wider sm:px-4">BUY NOW</a>
+        <button id="menuBtn" class="ml-1 inline-flex h-10 w-10 items-center justify-center rounded-lg ring-1 ring-gold-400/40 md:hidden" aria-label="Open menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fde68a" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="hidden border-t border-gold-400/20 px-4 py-4 md:hidden">
+      <div class="flex flex-col gap-3 font-display text-sm font-semibold tracking-wider">
+        <a href="#mission" class="rounded-lg px-3 py-2 hover:bg-gold-400/10">MISSION</a>
+        <a href="#buy" class="rounded-lg px-3 py-2 hover:bg-gold-400/10">HOW TO BUY</a>
+        <a href="#chart" class="rounded-lg px-3 py-2 hover:bg-gold-400/10">CHART</a>
+        <a href="https://dexscreener.com/bsc/TBA" target="_blank" rel="noopener noreferrer" class="btn-outline rounded-lg px-3 py-2 text-center">CHART</a>
+      </div>
+    </div>
+  </nav>
+
+  <header id="top" class="mars-hero relative z-10 min-h-screen">
+    <div class="absolute inset-0 bg-gradient-to-r from-void/70 via-void/25 to-transparent"></div>
+    <div class="relative mx-auto flex min-h-screen max-w-7xl flex-col items-center px-4 pb-16 pt-28 text-center lg:items-start lg:pt-36 lg:text-left">
+      <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-gold-400/35 bg-void/50 px-3 py-1 font-mono text-[11px] tracking-[0.22em] text-gold-200">
+        <span class="live-dot h-2 w-2 rounded-full bg-gold-400"></span>
+        LIVE FROM MARS · $牛来火星
+      </div>
+
+      <div class="flex w-full flex-col items-center gap-10 lg:flex-row lg:items-center lg:justify-between">
+        <div class="max-w-2xl">
+          <p class="mb-2 font-display text-sm font-bold tracking-[0.35em] text-gold-300">BULL ON MARS</p>
+          <h1 class="font-cn gold-text text-6xl leading-none sm:text-7xl md:text-8xl lg:text-[7.5rem]">牛来火星</h1>
+          <p class="mt-2 font-display text-xl font-extrabold tracking-widest text-gold-400 sm:text-2xl">$牛来火星</p>
+          <p class="mt-6 max-w-xl text-base leading-relaxed text-cream/85 sm:text-lg">
+            牛来火星 brings cosmic bull energy, wild memes, and unstoppable BNB vibes straight to Mars!
+          </p>
+
+          <div class="mt-8 flex flex-col items-center gap-3 sm:flex-row lg:items-start">
+            <a href="https://flap.sh/bnb/TBA" target="_blank" rel="noopener noreferrer" class="btn-gold inline-flex w-full items-center justify-center gap-2 rounded-xl px-7 py-3.5 font-display text-base font-extrabold tracking-wider sm:w-auto">
+              BUY NOW
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="https://dexscreener.com/bsc/TBA" target="_blank" rel="noopener noreferrer" class="btn-outline inline-flex w-full items-center justify-center rounded-xl px-7 py-3.5 font-display text-base font-bold tracking-wider sm:w-auto">
+              CHART
+            </a>
+          </div>
+
+          <div class="ca-box mt-6 flex w-full max-w-xl items-center gap-3 rounded-xl px-3 py-2.5 sm:px-4">
+            <span class="shrink-0 font-mono text-[11px] tracking-widest text-gold-300">CA</span>
+            <code id="caValue" class="min-w-0 flex-1 truncate text-left font-mono text-sm text-cream sm:text-base">TBA</code>
+            <button type="button" data-copy-ca class="btn-gold shrink-0 rounded-lg px-3 py-1.5 font-display text-xs font-extrabold tracking-wider">COPY</button>
+          </div>
+        </div>
+
+        <div class="relative floaty">
+          <div class="gold-ring spin-slow absolute -inset-3 rounded-full opacity-90"></div>
+          <div class="spin-rev absolute -inset-6 rounded-full border border-dashed border-gold-400/40"></div>
+          <img src="logo.png" alt="牛来火星 astronaut bull" class="logo-glow relative h-56 w-56 rounded-full sm:h-72 sm:w-72 lg:h-80 lg:w-80" />
+        </div>
+      </div>
+
+      <dl class="mt-14 grid w-full grid-cols-2 gap-3 sm:grid-cols-4">
+        <div class="panel rounded-xl px-4 py-4">
+          <dt class="font-mono text-[10px] tracking-[0.22em] text-gold-300">CHAIN</dt>
+          <dd class="mt-1 font-display text-lg font-bold text-cream">BNB Chain</dd>
+        </div>
+        <div class="panel rounded-xl px-4 py-4">
+          <dt class="font-mono text-[10px] tracking-[0.22em] text-gold-300">TICKER</dt>
+          <dd class="mt-1 font-display text-lg font-bold text-cream">$牛来火星</dd>
+        </div>
+        <div class="panel rounded-xl px-4 py-4">
+          <dt class="font-mono text-[10px] tracking-[0.22em] text-gold-300">DESTINATION</dt>
+          <dd class="mt-1 font-display text-lg font-bold text-cream">MARS</dd>
+        </div>
+        <div class="panel rounded-xl px-4 py-4">
+          <dt class="font-mono text-[10px] tracking-[0.22em] text-gold-300">STATUS</dt>
+          <dd class="mt-1 font-display text-lg font-bold text-gold-300">STAMPEDE</dd>
+        </div>
+      </dl>
+    </div>
+  </header>
+
+  <div class="relative z-10 overflow-hidden border-y border-gold-400/25 bg-crust/60">
+    <div class="ticker flex w-max whitespace-nowrap py-3 font-display text-sm font-bold tracking-[0.28em] text-gold-300">
+      <span class="px-6">牛来火星 • $牛来火星 • BULL ON MARS • COSMIC BULL ENERGY • WILD MEMES • UNSTOPPABLE BNB VIBES • 登陆火星 • HORNS UP • 牛来火星 • $牛来火星 • BULL ON MARS • COSMIC BULL ENERGY • WILD MEMES • UNSTOPPABLE BNB VIBES • 登陆火星 • HORNS UP •</span>
+      <span class="px-6">牛来火星 • $牛来火星 • BULL ON MARS • COSMIC BULL ENERGY • WILD MEMES • UNSTOPPABLE BNB VIBES • 登陆火星 • HORNS UP • 牛来火星 • $牛来火星 • BULL ON MARS • COSMIC BULL ENERGY • WILD MEMES • UNSTOPPABLE BNB VIBES • 登陆火星 • HORNS UP •</span>
+    </div>
+  </div>
+
+  <section class="relative z-10 px-4 py-8">
+    <figure class="mx-auto max-w-7xl overflow-hidden rounded-2xl border border-gold-400/35 shadow-[0_30px_80px_rgba(0,0,0,0.45)]">
+      <img src="banner.jpg" alt="牛来火星 banner — astronaut bull on the Martian surface" class="h-auto w-full object-cover" />
+    </figure>
+    <p class="mx-auto mt-3 max-w-7xl font-mono text-[11px] tracking-[0.2em] text-gold-400/80">MISSION PHOTOGRAPH // 牛来火星 LANDING ZONE</p>
+  </section>
+
+  <section id="mission" class="relative z-10 mx-auto max-w-7xl px-4 py-20">
+    <p class="font-mono text-xs tracking-[0.35em] text-gold-400">01 // MISSION BRIEF</p>
+    <h2 class="mt-3 font-cn text-4xl gold-text sm:text-5xl md:text-6xl">宇宙牛气，登陆火星</h2>
+    <p class="mt-5 max-w-3xl text-lg leading-relaxed text-cream/80">
+      牛来火星 brings cosmic bull energy, wild memes, and unstoppable BNB vibes straight to Mars!
+      The herd left Earth. The charts followed. Now the only direction is up the crater rim.
+    </p>
+    <div class="mt-12 grid gap-5 md:grid-cols-3">
+      <article class="panel reveal d1 rounded-2xl p-6">
+        <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-gold-400/15 font-display text-xl font-extrabold text-gold-300">01</div>
+        <h3 class="font-display text-xl font-extrabold tracking-wide text-gold-200">COSMIC BULL ENERGY</h3>
+        <p class="mt-3 text-sm leading-relaxed text-cream/75">Horns through the visor, visor toward the sun. 牛来火星 is the first bull to punch a one-way ticket to the red planet — and the whole herd is coming with it.</p>
+      </article>
+      <article class="panel reveal d2 rounded-2xl p-6">
+        <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-gold-400/15 font-display text-xl font-extrabold text-gold-300">02</div>
+        <h3 class="font-display text-xl font-extrabold tracking-wide text-gold-200">WILD MEMES</h3>
+        <p class="mt-3 text-sm leading-relaxed text-cream/75">Dust storms, diamond hooves, and degen transmissions. The lore writes itself. The timeline is the launchpad. Stay unhinged, stay bullish.</p>
+      </article>
+      <article class="panel reveal d3 rounded-2xl p-6">
+        <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-gold-400/15 font-display text-xl font-extrabold text-gold-300">03</div>
+        <h3 class="font-display text-xl font-extrabold tracking-wide text-gold-200">UNSTOPPABLE BNB VIBES</h3>
+        <p class="mt-3 text-sm leading-relaxed text-cream/75">Settled on BNB Smart Chain — fast, cheap, and built for a stampede. Swap BNB, grab $牛来火星, and don't look back at Earth.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="buy" class="relative z-10 border-y border-gold-400/15 bg-gradient-to-b from-crust/30 to-transparent">
+    <div class="mx-auto max-w-7xl px-4 py-20">
+      <p class="font-mono text-xs tracking-[0.35em] text-gold-400">02 // LAUNCH SEQUENCE</p>
+      <h2 class="mt-3 font-cn text-4xl gold-text sm:text-5xl md:text-6xl">如何买入 How to Buy</h2>
+      <p class="mt-4 max-w-2xl text-cream/75">Four steps. One chain. Use BNB to grab $牛来火星 and join the Mars stampede.</p>
+
+      <div class="relative mt-12 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+        <article class="panel reveal d1 rounded-2xl p-5">
+          <img src="step-1.jpg" alt="Step 1 — create a wallet" class="mx-auto h-44 w-44 rounded-full object-cover ring-2 ring-gold-400/60" />
+          <p class="mt-5 font-mono text-[11px] tracking-[0.28em] text-gold-400">STEP 01</p>
+          <h3 class="mt-1 font-display text-xl font-extrabold text-cream">装备钱包</h3>
+          <p class="text-sm font-semibold text-gold-300">Get a Wallet</p>
+          <p class="mt-3 text-sm leading-relaxed text-cream/70">Install MetaMask or Trust Wallet and switch the network to BNB Smart Chain. That's your ticket off Earth.</p>
+        </article>
+        <article class="panel reveal d2 rounded-2xl p-5">
+          <img src="step-2.jpg" alt="Step 2 — load BNB" class="mx-auto h-44 w-44 rounded-full object-cover ring-2 ring-gold-400/60" />
+          <p class="mt-5 font-mono text-[11px] tracking-[0.28em] text-gold-400">STEP 02</p>
+          <h3 class="mt-1 font-display text-xl font-extrabold text-cream">注入 BNB</h3>
+          <p class="text-sm font-semibold text-gold-300">Fuel with BNB</p>
+          <p class="mt-3 text-sm leading-relaxed text-cream/70">Load BNB into your wallet. BNB is rocket fuel — every swap, every landing, every moonshot on the way to Mars.</p>
+        </article>
+        <article class="panel reveal d3 rounded-2xl p-5">
+          <img src="step-3.jpg" alt="Step 3 — open Flap.sh" class="mx-auto h-44 w-44 rounded-full object-cover ring-2 ring-gold-400/60" />
+          <p class="mt-5 font-mono text-[11px] tracking-[0.28em] text-gold-400">STEP 03</p>
+          <h3 class="mt-1 font-display text-xl font-extrabold text-cream">对接 Flap</h3>
+          <p class="text-sm font-semibold text-gold-300">Open Flap.sh</p>
+          <p class="mt-3 text-sm leading-relaxed text-cream/70">Hit Buy Now to open Flap.sh, connect the wallet, and paste the $牛来火星 contract. Confirm you're on BNB.</p>
+        </article>
+        <article class="panel reveal d4 rounded-2xl p-5">
+          <img src="step-4.jpg" alt="Step 4 — swap BNB for 牛来火星" class="mx-auto h-44 w-44 rounded-full object-cover ring-2 ring-gold-400/60" />
+          <p class="mt-5 font-mono text-[11px] tracking-[0.28em] text-gold-400">STEP 04</p>
+          <h3 class="mt-1 font-display text-xl font-extrabold text-cream">登陆火星</h3>
+          <p class="text-sm font-semibold text-gold-300">Swap &amp; Hold</p>
+          <p class="mt-3 text-sm leading-relaxed text-cream/70">Swap BNB for $牛来火星, confirm the tx, and plant your flag. Welcome to the herd. Horns up.</p>
+        </article>
+      </div>
+
+      <div class="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <a href="https://flap.sh/bnb/TBA" target="_blank" rel="noopener noreferrer" class="btn-gold inline-flex w-full items-center justify-center rounded-xl px-8 py-3.5 font-display text-base font-extrabold tracking-wider sm:w-auto">BUY NOW</a>
+        <a href="https://dexscreener.com/bsc/TBA" target="_blank" rel="noopener noreferrer" class="btn-outline inline-flex w-full items-center justify-center rounded-xl px-8 py-3.5 font-display text-base font-bold tracking-wider sm:w-auto">CHART</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="chart" class="relative z-10 mx-auto max-w-7xl px-4 py-20">
+    <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+      <div>
+        <p class="font-mono text-xs tracking-[0.35em] text-gold-400">03 // LIVE TELEMETRY</p>
+        <h2 class="mt-3 font-cn text-4xl gold-text sm:text-5xl md:text-6xl">Chart</h2>
+        <p class="mt-3 max-w-xl text-cream/75">Dexscreener feed for $牛来火星 on BNB. Copy the CA, track the stampede, then ape in on Flap.</p>
+      </div>
+      <div class="ca-box flex w-full max-w-xl items-center gap-3 rounded-xl px-3 py-2.5 lg:max-w-md">
+        <span class="shrink-0 font-mono text-[11px] tracking-widest text-gold-300">CA</span>
+        <code class="ca-text min-w-0 flex-1 truncate font-mono text-sm text-cream">TBA</code>
+        <button type="button" data-copy-ca class="btn-gold shrink-0 rounded-lg px-3 py-1.5 font-display text-xs font-extrabold tracking-wider">COPY</button>
+      </div>
+    </div>
+
+    <div class="panel mt-8 overflow-hidden rounded-2xl p-2 sm:p-3">
+      <div id="dexscreener-embed">
+        <iframe title="Dexscreener chart for 牛来火星" src="https://dexscreener.com/bsc/TBA?embed=1&theme=dark&trades=0&info=0"></iframe>
+      </div>
+    </div>
+
+    <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+      <a href="https://dexscreener.com/bsc/TBA" target="_blank" rel="noopener noreferrer" class="btn-outline inline-flex items-center justify-center rounded-xl px-6 py-3 font-display text-sm font-bold tracking-wider">OPEN DEXSCREENER</a>
+      <a href="https://flap.sh/bnb/TBA" target="_blank" rel="noopener noreferrer" class="btn-gold inline-flex items-center justify-center rounded-xl px-6 py-3 font-display text-sm font-extrabold tracking-wider">BUY NOW</a>
+    </div>
+  </section>
+
+  <section class="relative z-10 mx-auto max-w-7xl px-4 pb-20">
+    <div class="panel overflow-hidden rounded-3xl">
+      <div class="grid items-center gap-8 p-8 md:grid-cols-[1.2fr_0.8fr] md:p-12">
+        <div>
+          <p class="font-mono text-xs tracking-[0.35em] text-gold-400">04 // JOIN THE HERD</p>
+          <h2 class="mt-3 font-cn text-4xl gold-text sm:text-5xl">跟上牛群</h2>
+          <p class="mt-4 max-w-lg text-cream/80">Transmissions drop on X. Memes, landing updates, and cosmic bull energy — follow 牛来火星 and don't miss the next dust storm.</p>
+          <a href="https://x.com/bullonmars" target="_blank" rel="noopener noreferrer" class="btn-gold mt-6 inline-flex items-center gap-3 rounded-xl px-6 py-3 font-display text-sm font-extrabold tracking-wider">
+            <img src="x.png" alt="" class="h-6 w-6 rounded-sm object-cover" />
+            FOLLOW @bullonmars
+          </a>
+        </div>
+        <img src="logo.png" alt="" class="mx-auto h-44 w-44 rounded-full ring-2 ring-gold-400/50 md:h-56 md:w-56" />
+      </div>
+    </div>
+  </section>
+
+  <footer class="relative z-10 border-t border-gold-400/20 bg-void">
+    <div class="mx-auto flex max-w-7xl flex-col items-center gap-5 px-4 py-10 text-center">
+      <a href="#top" class="flex items-center gap-2">
+        <img src="logo.png" alt="" class="h-10 w-10 rounded-full ring-1 ring-gold-400/60" />
+        <span class="font-cn text-2xl gold-text">牛来火星</span>
+      </a>
+      <div class="flex items-center gap-4">
+        <a href="https://x.com/bullonmars" target="_blank" rel="noopener noreferrer" class="opacity-80 hover:opacity-100" aria-label="X">
+          <img src="x.png" alt="X" class="h-9 w-9 rounded-md object-cover ring-1 ring-gold-400/40" />
+        </a>
+        <a href="https://flap.sh/bnb/TBA" target="_blank" rel="noopener noreferrer" class="font-display text-xs font-bold tracking-wider text-gold-300 hover:text-gold-200">BUY NOW</a>
+        <a href="https://dexscreener.com/bsc/TBA" target="_blank" rel="noopener noreferrer" class="font-display text-xs font-bold tracking-wider text-gold-300 hover:text-gold-200">CHART</a>
+      </div>
+      <p class="max-w-2xl text-xs leading-relaxed text-cream/45">
+        $牛来火星 is a meme coin on BNB Smart Chain with no intrinsic value or expectation of financial return.
+        This site is for entertainment only and is not financial advice. Don't buy more than you can afford to lose. DYOR.
+      </p>
+      <p class="font-mono text-[10px] tracking-[0.25em] text-gold-400/50">© 2026 牛来火星 · BULL ON MARS</p>
+    </div>
+  </footer>
+
+  <div id="toast" class="pointer-events-none fixed bottom-6 left-1/2 z-[70] hidden -translate-x-1/2 rounded-full border border-gold-400/40 bg-deep/95 px-5 py-2 font-display text-sm font-bold tracking-wider text-gold-200 shadow-lg">
+    CA copied · 已复制
+  </div>
+
+  <script>
+    const CA = "TBA";
+
+    document.querySelectorAll("[data-copy-ca]").forEach((btn) => {
+      btn.addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(CA);
+        } catch (err) {
+          const ta = document.createElement("textarea");
+          ta.value = CA;
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand("copy");
+          ta.remove();
+        }
+        const toast = document.getElementById("toast");
+        toast.classList.remove("hidden");
+        clearTimeout(window.__toastTimer);
+        window.__toastTimer = setTimeout(() => toast.classList.add("hidden"), 1800);
+      });
+    });
+
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    menuBtn.addEventListener("click", () => mobileMenu.classList.toggle("hidden"));
+    mobileMenu.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => mobileMenu.classList.add("hidden")));
+
+    (function dust() {
+      const c = document.getElementById("dust");
+      const ctx = c.getContext("2d");
+      let w, h, bits;
+      const N = window.innerWidth < 768 ? 36 : 70;
+      function resize() {
+        w = c.width = innerWidth;
+        h = c.height = innerHeight;
+      }
+      function spawn() {
+        bits = Array.from({ length: N }, () => ({
+          x: Math.random() * w,
+          y: Math.random() * h,
+          r: Math.random() * 1.6 + 0.3,
+          s: Math.random() * 0.55 + 0.15,
+          a: Math.random() * 0.35 + 0.08,
+        }));
+      }
+      function tick() {
+        ctx.clearRect(0, 0, w, h);
+        for (const p of bits) {
+          ctx.fillStyle = "rgba(253, 230, 138," + p.a + ")";
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fill();
+          p.x += p.s;
+          p.y += p.s * 0.18;
+          if (p.x > w + 4) p.x = -4;
+          if (p.y > h + 4) p.y = -4;
+        }
+        requestAnimationFrame(tick);
+      }
+      resize();
+      spawn();
+      tick();
+      addEventListener("resize", () => { resize(); spawn(); });
+    })();
+  </script>
+</body>
+</html>
